@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AR Navigation Example</title>
+    <title>AR Calendar</title>
+    <link rel="icon" href="s.png" type="image/x-icon">
     <!-- Include A-Frame and MindAR -->
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
@@ -34,7 +35,7 @@
         position: fixed;
         top: 10%; /* Adjust to fit on smaller screens */
         height: 500px;
-        margin-left: 13px;
+        margin-left: 17px;
         width: 65%; /* Responsive width */
         background: rgba(
           255,
@@ -181,15 +182,15 @@
       </p>
       <img
         id="message-image"
-        src="e.jpg"
+        src="s.png"
         alt=""
         style="
-          width: 250px;
+          width: 330px;
           height: 150px;
           border-radius: 100%;
-
+          align-content: center;
           margin-top: 10px;
-          margin-left: 20px;
+          margin-right: 15px;
         "
       />
       <p id="message-content" style="margin-top: 20px">
@@ -456,14 +457,14 @@
       const messages = [
         {
           text: "Touch Next to see the Instructions for better experience",
-          icon: "s.png",
-          img: "s.jpg",
+          /* icon: "s.png",
+          img: "s.jpg", */
           p: "Welcome to Sampath AR Calendar 2025",
         },
         {
           text: "Point your camera steadily at the Calendar image",
-          icon: "s.png",
-          img: "s.jpg",
+          /* icon: "s.png",
+          img: "s.jpg", */
           p: "Welcome to Sampath AR Calendar 2025",
         },
         {
@@ -497,9 +498,9 @@
 
       // Function to update the message
       function updateMessage() {
-        const { text, icon, p, a } = messages[currentMessageIndex];
+        const { text, p, a } = messages[currentMessageIndex];
         messageContent.textContent = text;
-        messageIcon.src = icon;
+        
         heading.textContent = p;
         subheading.textContent = a;
 
